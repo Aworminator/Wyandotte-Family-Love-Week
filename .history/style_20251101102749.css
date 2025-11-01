@@ -43,8 +43,8 @@ body {
 
 .edge-layer .e3 {
   /* bottom-left, rotated */
-  bottom: -80%;
-  right: 0px;
+  bottom: 0px;
+  left: 0px;
   transform: rotate(270deg);
 }
 
@@ -64,8 +64,8 @@ body {
 
 .edge-layer .e6 {
   /* mid-right */
-  top: 62%;
-  right: 0px;
+  top: 50%;
+  right: -20px;
   transform: rotate(270deg);
 }
 

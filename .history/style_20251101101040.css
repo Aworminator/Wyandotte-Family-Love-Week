@@ -10,65 +10,6 @@ body {
   padding: 0;
 }
 
-/* Edge decoration layer */
-.edge-layer {
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  z-index: 0; /* behind main content and header accents */
-}
-
-.edge-layer .edge {
-  position: absolute;
-  width: clamp(120px, 18vw, 220px);
-  height: auto;
-  opacity: 0.55; /* subtle */
-  filter: saturate(120%);
-}
-
-/* Positions and rotations */
-.edge-layer .e1 {
-  /* top-left */
-  top: 0px;
-  left: 0px;
-  transform: rotate(90deg);
-}
-
-.edge-layer .e2 {
-  /* top-right, rotated */
-  top: 0px;
-  right: 0px;
-  transform: rotate(180deg);
-}
-
-.edge-layer .e3 {
-  /* bottom-left, rotated */
-  bottom: -80%;
-  right: 0px;
-  transform: rotate(270deg);
-}
-
-.edge-layer .e4 {
-  /* bottom-right, flipped */
-  bottom: 28px;
-  right: 20px;
-  transform: rotate(180deg);
-}
-
-.edge-layer .e5 {
-  /* mid-left */
-  bottom: 50px;
-  left: 0px;
-  transform: rotate(90deg);
-}
-
-.edge-layer .e6 {
-  /* mid-right */
-  top: 62%;
-  right: 0px;
-  transform: rotate(270deg);
-}
-
 h1 {
   font-family: "Roboto", sans-serif;
   font-optical-sizing: auto;
@@ -86,6 +27,28 @@ h1 {
   margin-bottom: -20px;
 }
 
+.left-corner {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-bottom: clamp(90px, 18vw, 180px) solid #b9070787;
+  border-right: clamp(90px, 18vw, 180px) solid transparent;
+  z-index: 10;
+}
+
+.right-corner {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 0;
+  border-top: clamp(90px, 18vw, 180px) solid #b907077f;
+  border-left: clamp(90px, 18vw, 180px) solid transparent;
+  z-index: 10;
+}
+
 .header {
   text-align: center;
   font-size: 2em;
@@ -95,7 +58,6 @@ h1 {
 .text {
   position: relative;
   padding-top: 10px;
-  z-index: 1; /* ensure over decorative edges */
 }
 
 .urgent {
@@ -129,17 +91,8 @@ h1 {
 }
 
 .text-image {
-  height: 35vh;
-  width: 35wh;
-  margin: 0 auto;
-  display: block;
-}
-
-.edges {
-  height: 35vh;
-  width: 35wh;
-  margin: 0 auto;
-  display: block;
+  height: 40vh;
+  width: 40wh;
 }
 
 .chevrons {
@@ -211,8 +164,6 @@ h1 {
   padding: auto;
   padding-bottom: 50px;
   margin: 0;
-  position: relative;
-  z-index: 1; /* ensure over decorative edges */
 }
 
 #signupForm {
@@ -274,17 +225,6 @@ h1 {
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
-  .edge-layer .edge {
-    width: clamp(90px, 28vw, 160px);
-    opacity: 0.45;
-  }
-
-  .edge-layer .e5 {
-    left: -40px;
-  }
-  .edge-layer .e6 {
-    right: -40px;
-  }
   .date-badge {
     padding: 8px 14px;
     font-size: 0.95rem;

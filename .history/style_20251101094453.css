@@ -10,65 +10,6 @@ body {
   padding: 0;
 }
 
-/* Edge decoration layer */
-.edge-layer {
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  z-index: 0; /* behind main content and header accents */
-}
-
-.edge-layer .edge {
-  position: absolute;
-  width: clamp(120px, 18vw, 220px);
-  height: auto;
-  opacity: 0.55; /* subtle */
-  filter: saturate(120%);
-}
-
-/* Positions and rotations */
-.edge-layer .e1 {
-  /* top-left */
-  top: 0px;
-  left: 0px;
-  transform: rotate(90deg);
-}
-
-.edge-layer .e2 {
-  /* top-right, rotated */
-  top: 0px;
-  right: 0px;
-  transform: rotate(180deg);
-}
-
-.edge-layer .e3 {
-  /* bottom-left, rotated */
-  bottom: -80%;
-  right: 0px;
-  transform: rotate(270deg);
-}
-
-.edge-layer .e4 {
-  /* bottom-right, flipped */
-  bottom: 28px;
-  right: 20px;
-  transform: rotate(180deg);
-}
-
-.edge-layer .e5 {
-  /* mid-left */
-  bottom: 50px;
-  left: 0px;
-  transform: rotate(90deg);
-}
-
-.edge-layer .e6 {
-  /* mid-right */
-  top: 62%;
-  right: 0px;
-  transform: rotate(270deg);
-}
-
 h1 {
   font-family: "Roboto", sans-serif;
   font-optical-sizing: auto;
@@ -86,85 +27,32 @@ h1 {
   margin-bottom: -20px;
 }
 
+/* .left-corner {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-bottom: clamp(150px, 25vw, 250px) solid #b9070787;
+  border-right: clamp(150px, 25vw, 250px) solid transparent;
+  z-index: 10;
+}
+
+.right-corner {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 0;
+  border-top: clamp(150px, 25vw, 250px) solid #b907077f;
+  border-left: clamp(150px, 25vw, 250px) solid transparent;
+  z-index: 10;
+} */
+
 .header {
   text-align: center;
   font-size: 2em;
-  padding: 50px;
-}
-
-.text {
-  position: relative;
-  padding-top: 10px;
-  z-index: 1; /* ensure over decorative edges */
-}
-
-.urgent {
-  letter-spacing: 0.08em;
-}
-
-.date-badge {
-  display: inline-block;
-  margin: 18px auto 8px;
-  padding: 10px 18px;
-  background-color: #b90707;
-  color: #fff;
-  font-family: "Roboto", sans-serif;
-  font-weight: 900;
-  border-radius: 4px;
-}
-
-.website {
-  margin: 10px 0 0;
-}
-
-.website a {
-  color: #ffffff;
-  text-decoration: none;
-  font-family: "Roboto", sans-serif;
-  font-size: 0.9rem;
-}
-
-.website a:hover {
-  text-decoration: underline;
-}
-
-.text-image {
-  height: 35vh;
-  width: 35wh;
-  margin: 0 auto;
-  display: block;
-}
-
-.edges {
-  height: 35vh;
-  width: 35wh;
-  margin: 0 auto;
-  display: block;
-}
-
-.chevrons {
-  position: absolute;
-  color: rgba(255, 255, 255, 0.7);
-  font-family: "Roboto", sans-serif;
-  font-weight: 900;
-  letter-spacing: 8px;
-  font-size: 28px;
-}
-
-.chevrons span {
-  display: inline-block;
-  transform: scale(1.6);
-}
-
-.chevrons-top-left {
-  top: 16px;
-  left: 16px;
-}
-
-.chevrons-right {
-  right: 18px;
-  bottom: 30px;
-  transform: rotate(90deg);
+  mar
 }
 
 .form .left-corner {
@@ -208,11 +96,6 @@ h1 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: auto;
-  padding-bottom: 50px;
-  margin: 0;
-  position: relative;
-  z-index: 1; /* ensure over decorative edges */
 }
 
 #signupForm {
@@ -274,35 +157,6 @@ h1 {
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
-  .edge-layer .edge {
-    width: clamp(90px, 28vw, 160px);
-    opacity: 0.45;
-  }
-
-  .edge-layer .e5 {
-    left: -40px;
-  }
-  .edge-layer .e6 {
-    right: -40px;
-  }
-  .date-badge {
-    padding: 8px 14px;
-    font-size: 0.95rem;
-  }
-
-  .chevrons-top-left {
-    top: 10px;
-    left: 10px;
-  }
-
-  .chevrons-right {
-    right: 10px;
-    bottom: 20px;
-  }
-  .chevrons {
-    font-size: 24px;
-    letter-spacing: 7px;
-  }
   /* .form {
     padding: 0 0.25rem;
   }
