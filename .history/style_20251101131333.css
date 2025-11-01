@@ -144,10 +144,7 @@ h1 {
 }
 
 .text-image {
-  max-height: min(65vh, 65vw);
-  min-width: min(35vh, 65vw);
-  height: auto;
-  width: auto;
+  height: 35vh;
   margin: 0 auto;
   display: block;
 }
@@ -229,7 +226,6 @@ h1 {
 #signupForm {
   display: flex;
   flex-direction: column;
-  width: 80%;
   margin: 0 auto;
 }
 
@@ -317,6 +313,11 @@ h1 {
 }
 
 @media (min-width: 768px) {
+  .text-image {
+    min-height: 65vh;
+    margin: 0 auto;
+  }
+
   .text,
   .form {
     background-size: 200px 200px; /* adjust as needed */
@@ -324,10 +325,6 @@ h1 {
 
   .chevrons {
     font-size: 100px;
-  }
-
-  #signupForm {
-    width: 100%;
   }
 
   /* No fixed min-width on fields; container above handles max sizing */

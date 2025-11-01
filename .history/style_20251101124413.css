@@ -94,8 +94,7 @@ h1 {
 
 .text,
 .form {
-  min-height: 100vh;
-  min-height: 100dvh;
+  min-height: 700px;
   position: relative;
   padding-top: 10px;
   z-index: 1; /* ensure over decorative edges */
@@ -104,13 +103,6 @@ h1 {
   background-repeat: no-repeat;
   background-position: bottom left, top right; /* or bottom left, etc. */
   background-size: 100px 100px; /* adjust as needed */
-}
-
-.text {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }
 
 .urgent {
@@ -144,10 +136,8 @@ h1 {
 }
 
 .text-image {
-  max-height: min(65vh, 65vw);
-  min-width: min(35vh, 65vw);
-  height: auto;
-  width: auto;
+  height: 35vh;
+  width: 35wh;
   margin: 0 auto;
   display: block;
 }
@@ -217,10 +207,9 @@ h1 {
 .form {
   display: flex;
   flex-direction: column;
-  /* Allow children to stretch full width; container will center inner content */
-  align-items: stretch;
+  align-items: center;
   padding: auto;
-  padding-top: 100px;
+  padding: 150px 50px;
   margin: 0;
   position: relative;
   z-index: 1; /* ensure over decorative edges */
@@ -229,8 +218,6 @@ h1 {
 #signupForm {
   display: flex;
   flex-direction: column;
-  width: 80%;
-  margin: 0 auto;
 }
 
 .form-group input,
@@ -285,17 +272,19 @@ h1 {
   background-color: #5c0605;
 }
 
-/* Constrain the form content and make it responsive */
-.sign-up {
-  width: 100%;
-  max-width: 600px;
-  margin: 0 auto;
-  padding: 0 16px; /* small side padding on mobile */
-  box-sizing: border-box;
-}
-
 /* Responsive adjustments */
 @media (max-width: 768px) {
+  .edge-layer .edge {
+    width: clamp(90px, 28vw, 160px);
+    opacity: 0.45;
+  }
+
+  .edge-layer .e5 {
+    left: -40px;
+  }
+  .edge-layer .e6 {
+    right: -40px;
+  }
   .date-badge {
     padding: 8px 14px;
     font-size: 0.95rem;
@@ -314,21 +303,33 @@ h1 {
     font-size: 24px;
     letter-spacing: 7px;
   }
-}
-
-@media (min-width: 768px) {
-  .text,
-  .form {
-    background-size: 200px 200px; /* adjust as needed */
+  /* .form {
+    padding: 0 0.25rem;
   }
 
-  .chevrons {
-    font-size: 100px;
+  .sign-up {
+    max-width: none;
+    width: calc(100% - 0.5rem);
+    margin: 0 auto;
   }
 
-  #signupForm {
-    width: 100%;
+  .form h3 {
+    font-size: 1.3rem;
   }
 
-  /* No fixed min-width on fields; container above handles max sizing */
+  .form-group input,
+  .form-group select {
+    padding: 0.5rem;
+    border: 2px solid #5c0605;
+  }
+
+  .left-corner {
+    border-bottom: clamp(60px, 15vw, 120px) solid #b9070787;
+    border-right: clamp(60px, 15vw, 120px) solid transparent;
+  }
+
+  .right-corner {
+    border-top: clamp(60px, 15vw, 120px) solid #b907077f;
+    border-left: clamp(60px, 15vw, 120px) solid transparent;
+  } */
 }

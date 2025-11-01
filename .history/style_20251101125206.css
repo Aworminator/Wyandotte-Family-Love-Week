@@ -106,13 +106,6 @@ h1 {
   background-size: 100px 100px; /* adjust as needed */
 }
 
-.text {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
 .urgent {
   letter-spacing: 0.08em;
 }
@@ -144,10 +137,8 @@ h1 {
 }
 
 .text-image {
-  max-height: min(65vh, 65vw);
-  min-width: min(35vh, 65vw);
-  height: auto;
-  width: auto;
+  height: 35vh;
+  width: 35wh;
   margin: 0 auto;
   display: block;
 }
@@ -217,8 +208,7 @@ h1 {
 .form {
   display: flex;
   flex-direction: column;
-  /* Allow children to stretch full width; container will center inner content */
-  align-items: stretch;
+  align-items: center;
   padding: auto;
   padding-top: 100px;
   margin: 0;
@@ -229,8 +219,6 @@ h1 {
 #signupForm {
   display: flex;
   flex-direction: column;
-  width: 80%;
-  margin: 0 auto;
 }
 
 .form-group input,
@@ -285,15 +273,6 @@ h1 {
   background-color: #5c0605;
 }
 
-/* Constrain the form content and make it responsive */
-.sign-up {
-  width: 100%;
-  max-width: 600px;
-  margin: 0 auto;
-  padding: 0 16px; /* small side padding on mobile */
-  box-sizing: border-box;
-}
-
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .date-badge {
@@ -317,18 +296,10 @@ h1 {
 }
 
 @media (min-width: 768px) {
-  .text,
-  .form {
-    background-size: 200px 200px; /* adjust as needed */
+  .text-image {
+    height: 65vh;
+    width: 65wh;
+    margin: 0 auto;
+    display: block;
   }
-
-  .chevrons {
-    font-size: 100px;
-  }
-
-  #signupForm {
-    width: 100%;
-  }
-
-  /* No fixed min-width on fields; container above handles max sizing */
 }

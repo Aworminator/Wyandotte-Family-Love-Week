@@ -158,7 +158,7 @@ h1 {
   font-family: "Roboto", sans-serif;
   font-weight: 900;
   letter-spacing: 8px;
-  font-size: 28px;
+  font-size: clamp 28px;
 }
 
 .chevrons span {
@@ -322,9 +322,9 @@ h1 {
     background-size: 200px 200px; /* adjust as needed */
   }
 
-  .chevrons {
+  /* .chevrons {
     font-size: 100px;
-  }
+  } */
 
   #signupForm {
     width: 100%;

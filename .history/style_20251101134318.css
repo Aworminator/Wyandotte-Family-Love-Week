@@ -144,8 +144,11 @@ h1 {
 }
 
 .text-image {
-  max-height: min(65vh, 65vw);
-  min-width: min(35vh, 65vw);
+  max-height: 35vh;
+  /* max-height: 65vh;
+  min-height: 35vh;
+  max-width: 65vw;
+  min-width: 35vw; */
   height: auto;
   width: auto;
   margin: 0 auto;
