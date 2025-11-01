@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Allura&family=Great+Vibes&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <section class="text">
+      <div class="left-corner"></div>
+      <div class="right-corner"></div>
+      <div class="header">
+        <h2 class="white great-vibes">
+          Teen Mission<br />
+          Experience
+        </h2>
+        <h1 class="red">MISSION<br />POSSIBLE</h1>
+        <h1 class="white" class="urgent">URGENT</h1>
+      </div>
+    </section>
+
+    <section class="form">
+      <div class="sign-up">
+        <div class="left-corner"></div>
+        <div class="right-corner"></div>
+        <h3>Sign Up for Mission Possible</h3>
+        <form id="signupForm">
+          <div class="form-group">
+            <label for="name">Full Name *</label>
+            <input type="text" id="name" name="name" required />
+          </div>
+
+          <div class="form-group">
+            <label for="age">Age *</label>
+            <input
+              type="number"
+              id="age"
+              name="age"
+              min="13"
+              max="18"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="grade">Grade *</label>
+            <select id="grade" name="grade" required>
+              <option value="">Select Grade</option>
+              <option value="8">8th Grade</option>
+              <option value="9">9th Grade</option>
+              <option value="10">10th Grade</option>
+              <option value="11">11th Grade</option>
+              <option value="12">12th Grade</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="phone">Phone Number *</label>
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              placeholder="(123) 456-7890"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email Address *</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+
+          <div class="form-group">
+            <label for="youthPastor">Youth Pastor Name *</label>
+            <input type="text" id="youthPastor" name="youthPastor" required />
+          </div>
+
+          <div class="form-group">
+            <label for="churchName">Church Name *</label>
+            <input type="text" id="churchName" name="churchName" required />
+          </div>
+
+          <button type="submit" class="submit-btn">Sign Me Up!</button>
+        </form>
+      </div>
+    </section>
+  </body>
+</html>
