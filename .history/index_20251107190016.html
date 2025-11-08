@@ -14,6 +14,30 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./style.css" />
+
+    <!-- MailerLite Universal -->
+    <script>
+      (function (w, d, e, u, f, l, n) {
+        w[f] =
+          w[f] ||
+          function () {
+            (w[f].q = w[f].q || []).push(arguments);
+          };
+        l = d.createElement(e);
+        l.async = 1;
+        l.src = u;
+        n = d.getElementsByTagName(e)[0];
+        n.parentNode.insertBefore(l, n);
+      })(
+        window,
+        document,
+        "script",
+        "https://assets.mailerlite.com/js/universal.js",
+        "ml"
+      );
+      ml("account", "346148");
+    </script>
+    <!-- End MailerLite Universal -->
   </head>
   <body>
     <section class="text">
@@ -46,29 +70,9 @@
 
     <section class="form">
       <div class="sign-up">
-        <!-- Google Form Embed -->
-        <iframe
-          src="https://docs.google.com/forms/d/e/1FAIpQLSc-KnzdmHwjVklvgv0PJuxBxM1YomddmWMqmVU6-r97g-57kg/viewform?embedded=true"
-          class="google-form-iframe"
-          title="Love Wyandotte Week Sign-up Form"
-          width="640"
-          height="1261"
-          frameborder="0"
-          marginheight="0"
-          marginwidth="0"
-          loading="lazy"
-          allowtransparency="true"
-          >Loading…</iframe
-        >
-        <p class="status status--info" style="text-align: center">
-          If the form doesn’t appear, open it directly:
-          <a
-            href="https://docs.google.com/forms/d/e/1FAIpQLSc-KnzdmHwjVklvgv0PJuxBxM1YomddmWMqmVU6-r97g-57kg/viewform"
-            target="_blank"
-            rel="noopener"
-            >Open Google Form</a
-          >
-        </p>
+        <!-- MailerLite Embedded Form -->
+        <div class="ml-embedded" data-form="6zrWDq"></div>
+        <!-- End MailerLite Embedded Form -->
       </div>
     </section>
   </body>

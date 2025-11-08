@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Allura&family=Great+Vibes&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <section class="text">
+      <div class="chevrons chevrons-top-left" aria-hidden="true">
+        <span>&rsaquo;</span><span>&rsaquo;</span><span>&rsaquo;</span>
+      </div>
+      <div class="chevrons chevrons-right" aria-hidden="true">
+        <span>&rsaquo;</span><span>&rsaquo;</span><span>&rsaquo;</span>
+      </div>
+      <div class="header">
+        <img
+          src="./images/text.png"
+          class="text-image"
+          alt="mission possible urgent"
+        />
+        <div class="date-badge" role="note" aria-label="Event dates">
+          JUNE 22-28
+        </div>
+
+        <h3 class="website">
+          <a
+            href="https://www.wyandottefamilychurch.org"
+            target="_blank"
+            rel="noopener"
+            >www.lovewyandotteweek.com</a
+          >
+        </h3>
+      </div>
+    </section>
+
+    <section class="form">
+      <div class="sign-up">
+        <!-- MailerLite Embedded Form -->
+        <div class="ml-embedded" data-form="6zrWDq"></div>
+        <!-- End MailerLite Embedded Form -->
+        <noscript>
+          <p style="color:#fff;font-family:Roboto, sans-serif; font-size:0.9rem;">
+            JavaScript is required to load the subscription form. Please enable JavaScript and reload.
+          </p>
+        </noscript>
+      </div>
+    </section>
+    <!-- MailerLite Universal (moved to end for faster first paint) -->
+    <script>
+      (function (w, d, e, u, f, l, n) {
+        w[f] =
+          w[f] ||
+          function () {
+            (w[f].q = w[f].q || []).push(arguments);
+          };
+        l = d.createElement(e);
+        l.async = 1;
+        l.src = u;
+        n = d.getElementsByTagName(e)[0];
+        n.parentNode.insertBefore(l, n);
+      })(
+        window,
+        document,
+        "script",
+        "https://assets.mailerlite.com/js/universal.js",
+        "ml"
+      );
+      ml("account", "346148");
+    </script>
+    <!-- End MailerLite Universal -->
+    <!-- Lightweight health check & user-visible fallback if embed fails -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // After a short delay (to allow async loader) check if MailerLite replaced the div
+        setTimeout(function () {
+          var embedHost = document.querySelector(".sign-up .ml-embedded");
+          if (!embedHost) return; // Already replaced by ML script
+          // If still the same placeholder element, show a helpful message.
+          if (embedHost.getAttribute("data-form")) {
+            var notice = document.createElement("div");
+            notice.className = "status status--error";
+            notice.style.color = "#ff6b6b";
+            notice.style.fontFamily = "Roboto, sans-serif";
+            notice.style.marginTop = "1rem";
+            notice.textContent = "The subscription form didn\u2019t load. If you use an ad/script blocker, please whitelist assets.mailerlite.com or try a different browser.";
+            embedHost.parentNode.appendChild(notice);
+          }
+        }, 1500);
+      });
+    </script>
+  </body>
+</html>
